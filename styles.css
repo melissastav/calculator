@@ -1,0 +1,142 @@
+.body 
+{  
+    padding: auto;
+    margin-top: 9.375rem;
+    justify-content: flex;
+    align-items: center;
+    min-height: 70%;
+    background-color: #ff30a2;
+   
+}
+
+h1 {
+ width: 20rem;
+ font-weight: bold;
+ font-family: monospace;
+ color: rgba(255, 255, 255, 0.658);
+text-align: center;
+margin: auto;
+
+padding-bottom: 5rem;;
+
+
+
+}
+.calculator {
+    max-width: 28.125rem;
+    min-width: 18.75rem;
+    height: 34rem;
+    margin: auto;
+    padding: 0.625rem;
+    background-color: rgba(79, 217, 255, 0.568);
+    border-radius: 1.25rem;
+    border: 0.625rem outset rgb(255, 255, 255);
+    box-shadow: 1.25rem 1.25rem 1.25rem rgb(54, 21, 54);
+}
+
+.display #screen {
+    width: 97%;
+    height:4.0625rem;
+    font-size: 1.875rem;
+    color: white;
+    font-family: monospace; 
+    background-color: rgba(0, 0, 0, 0.233);
+    border: 0.3125rem;
+    border-style: inset;
+    border-color: rgb(255, 255, 255);
+    border-radius: 1.25rem;
+    text-align: right;
+
+}
+
+
+.display input:focus {
+    border: none;
+    outline: none;
+  }
+
+  .buttons {
+    width: 100%;
+    margin-top: 2rem;
+    margin-left: 1.3rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    
+  }
+
+  .buttons .row button{
+width: 5.625rem;
+height: 2.5rem;
+font-size: 0.625rem;
+border: 0.125rem;
+background-color: rgba(255, 255, 255, 0.233);
+color: rgba(255, 255, 255, 0.966);
+font-size: 1.25rem;
+margin: 0.3125rem;
+margin-top: 0.625rem;
+border-radius: 1.875rem;
+font-family: monospace; 
+box-shadow: rgba(255, 255, 255, 0.37) 2px 2px 2px 2px;
+  }
+
+
+
+    #del {
+        background-color: rgba(255, 0, 0, 0.384);
+    }
+
+    #ce {
+        background-color: rgba(255, 166, 0, 0.438);
+    }
+
+    #equal {
+        background-color: rgba(0, 128, 0, 0.425);
+    }
+
+    
+.buttons .row button:hover {
+    color: rgb(26, 78, 16);
+    background-color: rgba(255, 255, 255, 0.589);
+    box-shadow: rgb(0, 0, 0) 0px 22px 70px 4px;
+}
+ #equal:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 255, 34);
+  }
+
+  #del:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 0, 0);
+    }
+
+    #ce:hover {
+      color: rgb(255, 255, 255);
+      background-color: rgb(255, 115, 0);
+      }
+
+
+    @media only screen and (max-width: 470px) {
+
+      .calculator {
+        width: 13rem;
+        height: 31rem;}
+
+        .buttons {
+          width: 100%;
+          margin-top: 2rem;
+          margin-right: 1.5rem;
+          display: flex;
+          justify-content: space-around;
+          flex-direction: column;
+          
+        }
+
+
+          .buttons .row button{
+        width: 3rem;
+        height: 2.5rem;
+      
+      
+          }
+        }
