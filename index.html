@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles.css"></link>
+    <title>Calculator</title>
+</head>
+<body class="body">
+
+  <h1>Scientific Calculator</h1>
+
+  <div class="calculator">
+    <div class="display">
+      <input  id="screen" type="text" placeholder="0">
+    </div>
+
+
+    <div class="buttons">
+      <div class="row">
+
+
+   <button onclick="sin()">sin</button>
+   <button onclick="pow2()">x<sup style="position: relative; bottom: .4em; right: .1em;">2</sup></button>
+   <button onclick="pow3()">x<sup style="position: relative; bottom: .4em; right: .1em;">3</sup></button>
+   <button id="del" onclick="screen.value=''">DEL</button>
+
+   <button onclick="cos()">cos</button>
+   <button onclick="sqrt()">√</button>
+   <button onclick="cbrt()">&#8731</button>
+   <button id="ce" onclick="backspace()">CE</button>
+  
+   <button onclick="tan()">tan</button>
+   
+   <button onclick="percent()">%</button>
+   <button onclick="log()">log</button> 
+   <button onclick="PI()">π</button>
+   
+   <button class="button">-</button> 
+   <button class="button">1</button>
+   <button class="button">2</button>
+   <button class="button">3</button>
+
+
+   <button class="button">+</button>
+   <button class="button">4</button>
+   <button class="button">5</button>
+   <button class="button">6</button>
+
+   <button class="button">x</button>
+   <button class="button">7</button>
+   <button class="button">8</button>
+   <button class="button">9</button>
+
+   <button class="button">÷</button>
+   <button class="button">.</button>
+   <button class="button">0</button>
+   <button id="equal" onclick="screen.value=eval(eval(screen.value))">=</button>
+  </div>
+      </div>
+        </div>
+
+
+
+ </body>
+
+ <script type="text/javascript">  
+
+var screen=document.querySelector('#screen');
+ var button=document.querySelectorAll('.button');
+
+
+  for(item of button)
+  {
+      item.addEventListener('click', (e)=>{
+        buttonText=e.target.innerText;
+
+        if(buttonText=='x')
+      {
+
+        buttonText='*';
+      }
+
+        if(buttonText=='÷')
+      {
+
+        buttonText='/';
+      }
+
+      screen.value+=buttonText;
+  });
+  }
+
+  function sin()
+  {
+    screen.value=Math.sin(eval(screen.value));
+  }
+
+  function cos()
+  {
+    screen.value=Math.cos(eval(screen.value));
+  }
+
+  function tan()
+  {
+    screen.value=Math.tan(eval(screen.value));
+  }
+
+  function pow2()
+  {
+    screen.value=Math.pow(screen.value,2);
+  }
+  function pow3()
+  {
+    screen.value=Math.pow(screen.value,3);
+  }
+
+  function sqrt()
+  {
+    screen.value=Math.sqrt(eval(screen.value,2));
+  }
+
+  function cbrt()
+  {
+    screen.value=Math.cbrt(eval(screen.value,));
+  }
+
+  function log()
+  {
+    screen.value=Math.log(eval(screen.value, log));
+  }
+
+  function PI()
+  {
+    screen.value = (eval(screen.value *3.14159265359));
+  }
+
+ function backspace()
+ {
+  screen.value=screen.value.substr(eval(0,screen.value.length-1));
+}
+
+function percent()
+ {
+  screen.value = (eval(screen.value / 100));
+ }
+
+ 
+
+
+
+</script>
+
+
+
+</html>
+
+
